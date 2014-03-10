@@ -1,0 +1,4 @@
+*.classpath
+UserManager/UserManager/.myhibernatedata
+*.mymetadata
+*.prefs

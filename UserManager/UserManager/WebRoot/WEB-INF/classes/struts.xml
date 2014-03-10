@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="strutsBean" extends="struts-default" namespace="/">
+		<!-- 用户登录 -->
+		<action name="login" class="login">
+			<result name="success">/LoginSuccess.jsp</result>
+			<result name="false">/Login.jsp</result>
+			<result name="input">/Login.jsp</result>
+		</action>
+		<!-- 用户更新详细信息 -->
+		<action name="updateelse" class="update" method="UpdateElse">
+			<result name="success">/UserInfo.jsp</result>
+
+		</action>
+		<!-- 用户更新密码 -->
+		<action name="updatepass" class="update" method="UpdatePassword">
+			<result name="success">/UpdateSuccess.jsp</result>
+			<result name="fail">/UpdateFail.jsp</result>
+		</action>
+		<!-- 用户注册 -->
+		<action name="regist" class="regist">
+			<result name="success">/LoginSuccess.jsp</result>
+			<result name="false">/Regist.jsp</result>
+			<result name="input">/Regist.jsp</result>
+		</action>
+		<!-- 查看用户 -->
+		<action name="user" class="user">
+			<result name="success">/User.jsp</result>
+		</action>
+		<!-- 删除用户 -->
+		<action name="delete" class="delete">
+			<result name="success">/DeleteSuccess.jsp</result>
+			<result name="fail">/DeletFail.jsp</result>
+		</action>
+		<!-- 用户信息 -->
+		<action name="userInfo" class="userInfo">
+			<result name="success">/UserInfo.jsp</result>
+		</action>
+	</package>
+</struts>    
